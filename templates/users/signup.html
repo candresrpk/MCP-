@@ -3,6 +3,53 @@
 
 {% block content %}
 
-    Signup
+    <div class="card p-5">
+        <form method="post">
+
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label for="username" class="form-label">username</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    name="username"
+                    id="username"
+                    aria-describedby="username"
+                    placeholder="username"
+                />
+                <small id="username" class="form-text text-muted">Enter your unique username</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="password1" class="form-label">password1</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    name="password1"
+                    id="password1"
+                    aria-describedby="password1"
+                    placeholder="password1"
+                />
+                <small id="password1" class="form-text text-muted">Enter your password</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="password2" class="form-label">password2</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    name="password2"
+                    id="password2"
+                    aria-describedby="password2"
+                    placeholder="password2"
+                />
+                <small id="password2" class="form-text text-muted">Confirm your password</small>
+            </div>
+            
+            <button class="btn btn-primary ">Create user</button>
+
+        </form>
+    </div>
 
 {% endblock  %}
