@@ -3,6 +3,18 @@
 
 {% block content %}
 
-    signin
+    <div class="card p-5"> 
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            {{form.as_p}}
+
+            <button>login</button>
+
+        </form>
+
+    </div>
 
 {% endblock  %}
