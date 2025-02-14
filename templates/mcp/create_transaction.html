@@ -1,0 +1,29 @@
+{% extends "../base.html" %}
+
+
+
+{% block content %}
+
+
+    <div class="row align-items-md-stretch">
+        <div class="col-md-12">
+            <div
+                class="h-100 p-5 text-white bg-dark border rounded-3"
+            >
+                <h2>Create a transaction</h2>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button
+                        class="btn btn-outline-primary"
+                        type="submit"
+                    >
+                        Create
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock  %}

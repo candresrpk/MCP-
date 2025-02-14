@@ -1,0 +1,20 @@
+{% extends "../base.html" %}
+
+
+{% block content %}
+
+
+    {% for transaction in transactions %}
+    
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">{{transaction.amount}}</h4>
+                <p class="card-text">{{transaction.description}}</p>
+            </div>
+        </div>
+        
+    
+    {% endfor %}
+
+
+{% endblock  %}

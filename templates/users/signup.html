@@ -4,6 +4,15 @@
 {% block content %}
 
     <div class="card p-5">
+
+        {% if error %}
+
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+        
+        {% endif %}
+
         <form method="post">
 
             {% csrf_token %}
